@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"start": "nodemon index.mjs"
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"database/*"
+		]
+	}
+}
