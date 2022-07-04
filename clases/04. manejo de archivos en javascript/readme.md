@@ -28,7 +28,9 @@ Notas:
 ¡Las rutas son son relativas al entorno de ejecución!
 Si estoy ejecutando un archivo `.mjs` que se encuentra en `/home/kevinzaracho/desktop/project/`, pero en la terminal estoy en `/home/`, las rutas relativas como `./db/file.json` se van a completar a partir de `/home/`.
 
-# Desafío
+## Desafío
+
+Las llamadas a las funciones están testeadas y las dejé comentadas para usar
 
 - [x] item: { id, title, description, price, image }
 
@@ -38,7 +40,3 @@ Si estoy ejecutando un archivo `.mjs` que se encuentra en `/home/kevinzaracho/de
 - - [x] getAll(): items[]
 - - [x] deleteByID( id ): boolean
 - - [x] deleteAll(): boolean - nuke lol
-
----
-
-las llamadas a las funciones están comentadas
