@@ -10,31 +10,33 @@ export default new (function container(path = './database/items.json') {
 	/**
 	 * devuelve un array con todos los items en la base de datos local
 	 * @async
-	 * @returns {array} items
+	 * @returns {Promise<any[]>} items
 	 */
 	const read = async () => {
 		const readed = JSON.parse(await readFile(path, { encoding: 'utf8' }))
-		return readed
+		return [...readed]
 	}
 
 	/**
 	 * sobreescribe la base de datos local con los items que se pasan
 	 * @async
 	 * @param {array} items
-	 * @returns { boolean }
+	 * @returns { Promise<boolean> }
 	 */
 	const write = async items => {
 		if (!items) return false
 
 		const data = JSON.stringify(items)
 
-		return await writeFile(path, data, { encoding: 'utf8' })
+		await writeFile(path, data, { encoding: 'utf8' })
+
+		return true
 	}
 
 	/**
 	 * @async
 	 * devuelve la cantidad de items en la base de datos local
-	 * @returns { Number }
+	 * @returns { Promise<number> }
 	 */
 	this.countAll = async () => {
 		return [...(await read())].length
@@ -49,7 +51,7 @@ export default new (function container(path = './database/items.json') {
 	 * @param {string} item.description
 	 * @param {number} item.price
 	 * @param {string} item.image
-	 * @returns { Boolean } Boolean
+	 * @returns { Promise<boolean> } Boolean
 	 */
 	this.save = async item => {
 		if (!item) return false
@@ -67,7 +69,7 @@ export default new (function container(path = './database/items.json') {
 	 * devuelve un item por su id si existe, sino devuelve un objeto vacío
 	 * @param {Object} item
 	 * @param {string} item.id
-	 * @returns { Object }
+	 * @returns { Promise<any> }
 	 */
 	this.getByID = async ({ id }) => {
 		const items = await read()
@@ -76,7 +78,7 @@ export default new (function container(path = './database/items.json') {
 
 	/**
 	 * devuelve todos los items que haya en la base de datos
-	 * @returns {Array} Items
+	 * @returns {Promise<any[]>} Items
 	 */
 	this.getAll = async () => {
 		return await read()
@@ -86,7 +88,7 @@ export default new (function container(path = './database/items.json') {
 	 * elimina un item según su id
 	 * @param {Object} item
 	 * @param {string} item.id
-	 * @returns {boolean} - Boolean
+	 * @returns {Promise<boolean>} - Boolean
 	 */
 	this.deleteByID = async ({ id }) => {
 		const items = await read()
@@ -103,10 +105,10 @@ export default new (function container(path = './database/items.json') {
 	/**
 	 * reemplaza todos los items por un array vacío y lo manda a guardar
 	 * @param {boolean} confirm
-	 * @returns {boolean}
+	 * @returns {Promise<boolean>}
 	 */
 	this.deleteAll = async confirm => {
-		if (confirm === true) return await write([])
 		if (!confirm) return false
+		return await write([])
 	}
 })()

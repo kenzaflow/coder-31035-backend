@@ -1,3 +1,7 @@
+/**
+ *
+ * @returns {string} Returns a UUID like 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+ */
 export const generateUUID = () => {
 	let d = new Date().getTime(),
 		d2 = (performance && performance.now && performance.now() * 1000) || 0
