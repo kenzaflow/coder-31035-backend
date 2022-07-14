@@ -2,11 +2,8 @@
 
 ## Administradores De Paquetes - Npm
 
-(Plantilla - Generado automáticamente)
-
-(Descripción)
-
-# Desafío
-
-(Agregar si tiene desafío o borrar)
-
+Vimos:
+- Ejecución de un .js con node
+- Módulos nativos (`require` vs `import`)
+- El `package.json`
+- Versionado (`> | >= | <= | < | latest`)

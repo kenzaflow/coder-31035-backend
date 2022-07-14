@@ -1,0 +1,16 @@
+[
+	{
+		"id": "971d00f5-844d-49ab-964b-1667776132b1",
+		"title": "Item demo",
+		"description": "hola",
+		"price": 419,
+		"image": "url..."
+	},
+	{
+		"id": "dc5e4f88-0cb5-4fb0-b1e2-10239d07732c",
+		"title": "Avergaston",
+		"description": "Item de prueba",
+		"price": 590,
+		"image": "url..."
+	}
+]

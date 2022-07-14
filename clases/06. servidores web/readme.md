@@ -2,11 +2,13 @@
 
 ## Servidores Web
 
-(Plantilla - Generado automáticamente)
-
-(Descripción)
+Vimos:
+- Nodemon, módulo HTTP, Express
 
 # Desafío
 
-(Agregar si tiene desafío o borrar)
+- [ ] Server con express. Puerto process.env.PORT | 8080
+- - [x] `get /products` => Array<{}>
+- - [x] `get /products/:id` => {}
+- - [ ] `get /product/random` => {}
 

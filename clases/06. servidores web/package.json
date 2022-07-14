@@ -1,0 +1,14 @@
+{
+	"scripts": {
+		"dev": "nodemon index.mjs",
+		"start": "node index.mjs"
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"database/*"
+		]
+	},
+	"dependencies": {
+		"express": "^4.18.1"
+	}
+}
