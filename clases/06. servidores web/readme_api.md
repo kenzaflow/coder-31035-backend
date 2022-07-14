@@ -60,8 +60,7 @@ GET /products
         "description": "example description",
         "price": 19.99,
         "image": "image url",
-    },
-    ...
+    }
 ]
 ```
 
