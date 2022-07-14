@@ -19,8 +19,7 @@ GET /products/random
         "description": "example description",
         "price": 19.99,
         "image": "image url",
-    },
-    {...},
+    }
 ```
 
 ---
@@ -40,8 +39,7 @@ GET /products/{id}
         "description": "example description",
         "price": 19.99,
         "image": "image url",
-    },
-    {...},
+    }
 ```
 
 ---
@@ -63,7 +61,7 @@ GET /products
         "price": 19.99,
         "image": "image url",
     },
-    {...},
+    ...
 ]
 ```
 
