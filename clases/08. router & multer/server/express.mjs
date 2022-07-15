@@ -10,9 +10,5 @@ export default async function CreateExpress() {
 
     App = await UseRoutes(App)
 
-    App.all('*', (req, res) => {
-        res.sendStatus(400)
-    })
-
     return App
 }

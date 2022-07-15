@@ -1,0 +1,9 @@
+include ../partials/main.pug
+h1.p-6 Pug App: Products
+br
+ul
+    each product in products
+        li.p-3
+            span.font-bold #{product.title}
+            span  | $#{product.price}
+            p #{product.description}

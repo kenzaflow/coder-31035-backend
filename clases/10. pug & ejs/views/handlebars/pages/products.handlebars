@@ -1,0 +1,11 @@
+<h1 class="p-6">Handlebars App: Products</h1>
+<br>
+<ul>
+    {{#each products}}
+    <li class="p-3">
+        <span class="font-bold">{{this.title}}</span>
+        <span> | ${{this.price}}</span>
+        <p>{{this.description}}</p>
+    </li>
+    {{/each}}
+</ul>

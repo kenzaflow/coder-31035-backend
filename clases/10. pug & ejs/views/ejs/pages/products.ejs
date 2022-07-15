@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs') %>
+
+    <h1 class="p-6">Ejs App: Products</h1>
+
+    <ul>
+
+
+        <% products.forEach(function(product){ %>
+            <li class="p-3">
+                <span class="font-bold"> <%= product.title %></span>
+                <span> | $<%= product.price %></span>
+                <p><%= product.description %></p>
+            </li>
+            <% }); %>
+
+    </ul>
+
+    <%- include('../partials/footer.ejs') %>
